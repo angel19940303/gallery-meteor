@@ -1,0 +1,24 @@
+<template name="imageThumb">
+    <li>
+        <div class="slider-delete">
+            <i class="material-icons">broken_image</i>
+            <a class="{{#if privateImage}}privateImage{{/if}}" href="#{{_id}}" style="background-image: url('{{url}}')">
+                <span></span>
+            </a>
+            <div>
+                <button class="delete view-back delete-button">
+                    <span>Delete this image</span>
+                </button>
+                <button class="view-back slider-title">
+                    <span>{{title}}</span>
+                </button>
+            </div>
+        </div>
+    </li>
+</template>
+
+<template name="imageLightbox">
+    <a class="lightbox {{#if privateImage}}privateImage{{/if}}" href="#_" id="{{_id}}">
+        <img src="{{url}}">
+    </a>
+</template>
